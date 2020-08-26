@@ -48,7 +48,7 @@ background-img: "../img/intro-bg.jpg"
 # Dynamic Text on the Header #
 ##############################
 
-dynamic-typing: True
+dynamic-typing: False
 shuffle: True # Shuffle the lines.
 loop: True
 loop-count: False # Set False for infinite loop, or set any number for finite loop.
@@ -138,13 +138,19 @@ events:
     description: "Need something notarized? Look no further!"
   - image: "/img/services/NotarizedLetter.jpg"
     date: "NOTARIZED LETTER"
-    description: "We offer quick and affordable ways to notarize letters."
+    description: "We offer quick and affordable ways to notarize letters"
   - image: "/img/services/SigningAgent.jpeg"
     date: "SIGNING AGENT"
-    description: "When it comes to your important documents, you can trust us to deliver the best service every time."
+    description: "When it comes to your important documents, you can trust us to deliver the best service every time"
   - image: "/img/services/MobileNotaryServices.jpeg"
     date: "MOBILE NOTARY SERVICES"
-    description: "Have something time-sensitive? Ask us about our mobile notary services."
+    description: "Have something time-sensitive? Ask us about our mobile notary services"
+  - image: "/img/services/ApostilleServices.jpeg"
+    date: "APOSTILLE SERVICES"
+    description: "We do provide Apostille services"
+  - image: "/img/services/LoanSigningAgent.jpeg"
+    date: "LOAN SIGNING AGENT"
+    description: "Let us be your loan signing agents"
 
 
 # First image of the Timeline
@@ -161,7 +167,7 @@ about:
 # Contact #
 ###########
 
-email: "Meenakshi.f07@gmail.com"
+email: "meenakshi.f07@gmail.com"
 phone_number: "4088290255" 
 location: "Santa Clara, CA 95051"
 
