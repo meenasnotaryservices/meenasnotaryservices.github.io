@@ -151,11 +151,19 @@ events:
 
 timeline-img: "/img/services/stamp.jpg"
 
+#########
+# About #
+########
+about:
+- image: "/img/notaryBanner.jpg"
+
 ###########
 # Contact #
 ###########
 
 email: "Meenakshi.f07@gmail.com"
+phone_number: "4088290255" 
+location: "Santa Clara, CA 95051"
 
 
 # Set a url pointing to your publish PGP Public Key here, and it will appear in the Contact section
@@ -202,8 +210,7 @@ keybase-in-footer: False
 
 pages_list:
   Services: 'services'
-  Our Vision: 'Our Vision' 
-  Blog: 'latest-post'
+  Vision: 'Vision' 
   Contact: 'contact'
 
 # Exclusion list from the generated _site
@@ -212,7 +219,7 @@ exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
 
 # Pagination path
 
-paginate_path: "blog/page:num/"
+# paginate_path: "blog/page:num/"
 
 # Enable minification SASS
 

@@ -1,38 +1,31 @@
-
 <!-- Contact Start -->
 
 <section id="{{ page.section-type }}" class="container content-section text-center">
-  <div class="row">
-    <div class="col-md-10 col-md-offset-1">
-
-      {{ page.content | markdownify }}
-
-      {% if site.email %}
-        {% if site.email contains '@' %}
-          {% assign newemail = site.email | split: '@' %}
-            <p>
-            <script>
-              function join_at_email(user, domain){
-              return (user && domain)?(user + "@" + domain):"";
-              }
-              document.write('<a href="mailto:'
-              + join_at_email( "{{ newemail[0] }}", "{{ newemail[1] }}" )
-              + '">'
-              + join_at_email( "{{ newemail[0] }}", "{{ newemail[1] }}" )
-              + '</a>'
-              );
-              </script>
-            </p>
-        {% else %}
-          <p><a href="mailto:{{ site.email }}">{{ site.email }}</a></p>
-        {% endif %}
-      {% endif %}
-
-      {% if site.pgp %}
-        <a href="{{ site.pgp }}" target="_blank">PGP Key</a>
-        <p/>
-      {% endif %}
-
+  <div class="elementor-widget-container">
+    <h3 class="elementor-heading-title elementor-size-default">Contact Us</h3>		</div>
+  <div class="" data-id="2fe7a638" data-element_type="widget" data-widget_type="icon-list.default">
+    <div class="elementor-widget-container">
+      <li class="elementor-icon-list-item">
+        <span class="elementor-icon-list-icon">
+          <a href="tel:{{ site.phone_number }}"> <span class="fa"&#xf095;>
+              <i aria-hidden="true" class=""></i> </span>
+            <span class="elementor-icon-list-text">{{ site.phone_number }}</span>
+          </a>
+        </li> 
+        <li class="elementor-icon-list-item">
+          <a href="mailto:{{ site.email }}">
+            <span class="fa fa-envelope">
+              <i aria-hidden="true" class=""></i>
+            </span>
+            <span class="elementor-icon-list-text">{{ site.email }}</span>
+          </a>
+         </li>
+        <li class="elementor-icon-list-item">
+          <span class="fa fa-map-marker">
+            <i aria-hidden="true" class=""></i> </span>
+          <span class="elementor-icon-list-text">{{ site.location }}</span>
+        </li>
+      </ul>
     </div>
   </div>
 </section>
