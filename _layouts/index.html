@@ -1,30 +1,53 @@
-
 <!-- Index Layout Start -->
 
 <!DOCTYPE html>
 <html lang="{{ site.lang }}">
 
-  {% include head.html %}
+{% include head.html %}
 
-  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top"  data-offset="151">
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" data-offset="151">
+  {% include navigation.html %}
+  <div class="container">
+    <table>
+      <div class="elementor-widget-container">
+        <a></a></br>
+        <a></a></br>
+        <a></a></br>
+        <a href="" style="font-size:20px;">
+          
+        </a></br>
+        <a href="mailto:{{ site.email }}" class="fa fa-envelope" style="font-size:20px;">
+          <u>{{ site.email }}</u>
+        </a></br>
+        <a></a></br>
+        <a href="tel:{{ site.phone_number }}" class="fa fa-phone" style="font-size:20px;">
+          <u>{{ site.phone_number }}</u>
+        </a></br>
+        <a></a></br>
+        <a style="font-size:20px;" href="https://www.google.com/maps/dir/37.3213662,-121.9814348/2651+Barcells+Ave,+Santa+Clara,+CA+95051/@37.3297358,-121.9838762,15z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x808fca60d261d4f7:0x7ccddd9a888274bf!2m2!1d-121.9722611!2d37.3384229"
+          class="fa fa-map-marker" target="_blank">
+          <u>{{ site.location }}</u>
+        </a></br>
+        <a></a></br>
+        <a></a></br>
+      </div>
+    </table>
+  </div>
 
-    {% include navigation.html %}
+  {% for p in site.pages_list %}
+  {% for page in site.pages %}
+  {% if p[1] == page.section-type %}
+  {% include {{ page.path }} %}
+  {% endif %}
+  {% endfor %}
+  {% endfor %}
 
-    {% include header.html %}
+  {% include footer.html %}
 
-    {% for p in site.pages_list %}
-      {% for page in site.pages %}
-        {% if p[1] == page.section-type %}
-          {% include {{ page.path }} %}
-        {% endif %}
-      {% endfor %}
-    {% endfor %}
+  {% include js.html %}
 
-    {% include footer.html %}
+</body>
 
-    {% include js.html %}
-
-  </body>
 </html>
 
 <!-- Index Layout End -->
