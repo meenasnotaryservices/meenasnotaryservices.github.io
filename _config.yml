@@ -32,7 +32,7 @@ lang: "en"
 author: ""
 title: "Notary Services"
 description: "Notary Services at reasonable price"
-keywords: "notary, services"
+keywords: "POA documentation, living trust, notary Santa Clara, notary Cupertino, notary Campbell, notary near me, OCi, passport renewal, loan signing documents, Taiwan passport renewal, Mobile notary ,Last will, Notary mountainview, notary Palo Alto"
 favicon: "/img/favicon.ico"
 
 ################
@@ -151,7 +151,14 @@ events:
   - image: "/img/services/LoanSigningAgent.jpeg"
     date: "LOAN SIGNING AGENT"
     description: "Let us be your loan signing agents"
-
+  - image: "/img/services/estatePlaning.png"
+    date: "ESTATE PLANNING DOCUMENTATION"
+    description: "We provide documentation and notary for"
+    subdesc: "True"
+    subdesc1: " (1) living trust, "
+    subdesc2: " Durable POA, "
+    subdesc3: " last will, "
+    subdesc4: " Advanced health care "
 
 # First image of the Timeline
 
@@ -193,7 +200,12 @@ pgp: False
 social:
   - title: "facebook"
     url: "https://www.facebook.com/MSNotaryservices/"
+  - title: "yelp"
+    url: "https://www.yelp.com/biz/24-7-meena-s-notary-services-santa-clara"
+  - title: "map-marker"
+    url: "https://www.google.com/maps/dir//2651+Barcells+Ave,+Santa+Clara,+CA+95051/@37.3384271,-121.9744498,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x808fca60d261d4f7:0x7ccddd9a888274bf!2m2!1d-121.9722611!2d37.3384229!3e0"
 
+  
 ############
 # 404 page #
 ############

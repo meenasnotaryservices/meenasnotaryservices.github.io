@@ -1,42 +1,63 @@
-
 <!-- Timeline Start -->
 
 <section id="{{ page.section-type }}" class="container text-center">
-  <a class="center" style="font-size:40px;" >
+  <a class="center" style="font-size:40px;">
     {{ content }}
-  </a>
+  </a></br>
+  <a class="center" style="font-size:20px;">
+    * Currently on promotional pricing. Regular pricing is $5/signature. Also, mobile charges are different.
+    </br>
+    Please call for pricing and appointment.
+  </a></br>
   <div class="row">
     <a></a></br>
     <a></a></br>
     <a></a></br>
     <a></a></br>
     <div class="col-md-10 col-md-offset-1">
-      
+
       {{ page.content | markdownify }}
 
       <ul class="timeline">
 
         {% for event in site.events %}
-          {% assign loopindex = forloop.index | modulo: 2 %}
-          {% capture class %}
-          {% if loopindex == 0 %}
-            timeline-inverted
-          {% endif %}
-          {% endcapture %}
+        {% assign loopindex = forloop.index | modulo: 2 %}
+        {% capture class %}
+        {% if loopindex == 0 %}
+        timeline-inverted
+        {% endif %}
+        {% endcapture %}
 
-          <li class="{{ class }}">
-            <div class="timeline-image">
-              <img class="img-circle img-responsive" src="{{site.baseurl}}{{ event.image }}" alt="">
+        <li class="{{ class }}">
+          <div class="timeline-image">
+            <img class="img-circle img-responsive" src="{{site.baseurl}}{{ event.image }}" alt="">
+          </div>
+          <div class="timeline-panel">
+            <div class="timeline-heading">
+              <h4>{{ event.date }}</h4>
             </div>
-            <div class="timeline-panel">
-              <div class="timeline-heading">
-                <h4>{{ event.date }}</h4>
+            <div class="timeline-body">
+              {{ event.description | markdownify }}
+              {% if event.subdesc == "True" %}
+              <div style="text-align:left; padding-left: 104px">
+                <ul>
+                  <li>
+                    <h5 style="margin-bottom: 14px;">{{event.subdesc1}}</h5>
+                  </li>
+                  <li>
+                    <h5 style="margin-bottom: 14px;">{{{event.subdesc2}}</h5>
+                  </li>
+                  <li><h5 style="margin-bottom: 14px;">{{event.subdesc3}}</h5>
+                  </li>
+                  <li><h5 style="margin-bottom: 14px;">{{event.subdesc4}}</h5>
+                  </li>
+                </ul>
               </div>
-              <div class="timeline-body">
-                {{ event.description | markdownify }}
-              </div>
+              {% endif %}
+
             </div>
-          </li>
+          </div>
+        </li>
         {% endfor %}
 
         <li class="timeline-inverted">
@@ -54,5 +75,5 @@
     width: 60%;
     padding: 10px;
   }
-  </style>
+</style>
 <!-- Timeline End -->
